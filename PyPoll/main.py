@@ -32,3 +32,22 @@ output = [
 ]
 
 print("\n".join(output))
+for candidate, votes in candidates_votes.items():
+    percentage = (votes / total_votes) * 100
+    print(f"{candidate}: {percentage:.3f}% ({votes})")
+    output.append(f"{candidate}: {percentage:.3f}% ({votes})")
+
+    if votes > winner_votes:
+        winner_votes = votes
+        winner = candidate
+
+output.extend([
+    "----------------------------",
+    f"Winner: {winner}",
+    "----------------------------",
+])
+
+# defineing the path to the analysis file & writeing the analysis to a text file
+analysis_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis", "analysis.txt")
+with open(analysis_path, 'w') as textfile:
+    textfile.write("\n".join(output))
