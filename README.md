@@ -8,6 +8,9 @@ I've uploaded my results, scripts, and relevant files.
 Resources:
 ASK BCS
 https://docs.python.org/3/library/collections.html#collections.Counter
+
 https://docs.python.org/3/tutorial/datastructures.html
+
 https://www.w3schools.com/python/python_file_write.asp
+
 https://www.geeksforgeeks.org/python-os-path-join-method/
