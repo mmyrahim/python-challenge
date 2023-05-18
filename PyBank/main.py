@@ -37,3 +37,25 @@ greatest_decrease_month = months[profit_changes.index(greatest_decrease) + 1]
 total_months = len(months)
 net_total = sum(profits)
 average_change = sum(profit_changes) / len(profit_changes)
+
+# printing the analysis
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {total_months}")
+print(f"Total: ${net_total}")
+print(f"Average Change: ${average_change:.2f}")
+print(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})")
+print(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})")
+
+
+analysis_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis", "analysis.txt")
+
+# writing the analysis to a text file opening and closing
+with open(analysis_path, 'w') as textfile:
+    textfile.write("Financial Analysis\n")
+    textfile.write("----------------------------\n")
+    textfile.write(f"Total Months: {total_months}\n")
+    textfile.write(f"Total: ${net_total}\n")
+    textfile.write(f"Average Change: ${average_change:.2f}\n")
+    textfile.write(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase})\n")
+    textfile.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease})\n")
