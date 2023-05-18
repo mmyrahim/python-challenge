@@ -6,7 +6,9 @@ For PyPoll, I tallied votes, listed candidates, calculated vote percentages, and
 I've uploaded my results, scripts, and relevant files. 
 
 Resources:
+
 ASK BCS
+
 https://docs.python.org/3/library/collections.html#collections.Counter
 
 https://docs.python.org/3/tutorial/datastructures.html
